@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "so101-doctor"
+version = "0.1.4"
+description = "Read the registers of every servo on an SO-101 arm and see how the servos are set up. Read only."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "src/so101_doctor/so101_twin/LICENSE"]
+authors = [{ name = "Vakhtang Inasaridze (Vato Labs)" }]
+requires-python = ">=3.9"
+dependencies = ["pyserial>=3.4"]
+classifiers = ["Programming Language :: Python :: 3", "Topic :: Scientific/Engineering"]
+
+[project.urls]
+Homepage = "https://vatolabs.com"
+Findings = "https://github.com/VatoLabs/STS3215_profile"
+
+[project.scripts]
+so101-doctor = "so101_doctor.cli:main"
+
+[tool.setuptools.package-data]
+so101_doctor = ["demo.json", "so101_twin/*", "so101_twin/assets/*", "so101_twin_p32/*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 120

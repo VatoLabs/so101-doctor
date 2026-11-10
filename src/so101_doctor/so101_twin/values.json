@@ -1,0 +1,33 @@
+{
+ "values": {
+  "motorconst": 2.488162999154816,
+  "resistance": 4.049791804059496,
+  "kp": 21.611692628135145,
+  "kd": 1.5287094769062695,
+  "slewmax": 2.8713844759585845,
+  "Vmax": 11.64,
+  "armature": 0.023921280906875945,
+  "damping": 0.03286575989149998,
+  "frictionloss": 0.19045493535364824
+ },
+ "sources": {
+  "motorconst": "measured once on one bench STS3215 servo (12 V)",
+  "resistance": "measured once on one bench STS3215 servo (12 V)",
+  "kp": "motorconst/resistance * supply * P * 0.166 (BAM's STS3215 error gain) * 1.10365 (measured on the same servo)",
+  "kd": "motorconst^2/resistance: cancels dcmotor's back-EMF compensation term (the STS3215 drives voltage)",
+  "slewmax": "stand-in for the firmware acceleration profile at Acceleration = Maximum_Acceleration = 254 (no native element limits setpoint acceleration); set on the same bench servo",
+  "Vmax": "supply * 0.97 (BAM's STS3215 duty limit)",
+  "armature": "measured once on one bench STS3215 servo (12 V)",
+  "damping": "measured once on one bench STS3215 servo (12 V)",
+  "frictionloss": "one constant for the load- and speed-dependent gearbox friction; set on the same bench servo",
+  "not mapped": "D (the model has no D term) and the load- and speed-dependent parts of the friction (folded into the frictionloss constant)"
+ },
+ "registers": {
+  "p": 16,
+  "d": 32,
+  "i": 0,
+  "acceleration": 254,
+  "maximum_acceleration": 254,
+  "vin": 12.0
+ }
+}

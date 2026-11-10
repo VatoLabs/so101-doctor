@@ -1,0 +1,5 @@
+so101-doctor
+Copyright 2026 Vakhtang Inasaridze (Vato Labs), https://vatolabs.com
+
+The bundled SO-101 MuJoCo twin folders (src/so101_doctor/so101_twin and so101_twin_p32) are derived from
+MuJoCo Menagerie's robotstudio_so101 model (Apache-2.0). Each folder's README.md states what was changed.
