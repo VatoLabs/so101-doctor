@@ -11,7 +11,7 @@ Needs Python 3.10 or newer (3.9 is enough for the check alone, without `mujoco==
 **macOS / Linux**
 ```
 python3 -m venv ~/so101
-~/so101/bin/pip install https://github.com/VatoLabs/so101-doctor/archive/refs/heads/main.zip mujoco==3.17.0
+~/so101/bin/pip install https://github.com/VatoLabs/so101-doctor/releases/latest/download/so101-doctor.zip mujoco==3.17.0
 ~/so101/bin/so101-doctor                                  # check the arm; --demo shows example output without one
 ~/so101/bin/so101-doctor --export-mujoco ~/so101_twin     # write the twin; works without an arm
 ~/so101/bin/python -m mujoco.viewer --mjcf ~/so101_twin/scene.xml
@@ -20,7 +20,7 @@ python3 -m venv ~/so101
 **Windows (PowerShell)**
 ```
 py -m venv "$HOME\so101"
-& "$HOME\so101\Scripts\pip" install https://github.com/VatoLabs/so101-doctor/archive/refs/heads/main.zip mujoco==3.17.0
+& "$HOME\so101\Scripts\pip" install https://github.com/VatoLabs/so101-doctor/releases/latest/download/so101-doctor.zip mujoco==3.17.0
 & "$HOME\so101\Scripts\so101-doctor"
 & "$HOME\so101\Scripts\so101-doctor" --export-mujoco "$HOME\so101_twin"
 & "$HOME\so101\Scripts\python" -m mujoco.viewer --mjcf "$HOME\so101_twin\scene.xml"
